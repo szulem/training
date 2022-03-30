@@ -7,7 +7,7 @@ class Course < ApplicationRecord
     copied_bets = bets.dup
 
     if system_type.present?
-      bets.each.with_index do |bet, index|
+      bets.each do |bet|
         copied_bets.delete_at(0)
 
         copied_bets.each do |temp_bet|
